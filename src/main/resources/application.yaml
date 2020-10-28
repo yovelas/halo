@@ -53,3 +53,12 @@ logging:
 halo:
   download-timeout: 5m
   cache: memory
+
+# 配置swagger
+#swagger:
+#  version: 1.0
+#  groupName: halo
+#  title: halo
+#  description: halo interface document
+#  # 扫描的包路径
+#  basePackage: run.halo.app.controller

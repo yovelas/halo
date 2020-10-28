@@ -110,3 +110,130 @@ java -jar halo-latest.jar
 ![admin-themes.png](https://i.loli.net/2019/09/11/FVA953Ljswd4c8G.png)
 
 ![admin-options.png](https://i.loli.net/2019/09/11/TK6SeMdVj1xcrDw.png)
+
+
+
+## 目录结构 
+
+```
+run.halo.app
+    |-- annotation: 注解
+    |   |-- DisableOnCondition: 限制某些条件下禁止访问api
+    |   `-- SensitiveConceal: 
+    |-- aspect: 切面
+    |-- cache: 缓存
+    |-- config: 配置
+    |-- controller: 控制器
+    |-- core
+    |-- event: 事件
+    |-- exception: 异常
+    |-- factory
+    |-- filter: 过滤
+    |-- handler
+    |-- listener: 监听
+    |-- mail: 邮箱
+    |-- model
+    |-- repository
+    |-- security: 安全
+    |-- service: 服务
+    |-- theme: 主题
+    |-- utils: 工具
+    `-- Application: 启动程序
+```
+
+
+## 路由
+
+```
+/page
+    /{page}
+/feed.xml
+/feed
+    /categories
+        /{slug}
+        /{slug}.xml
+/atom.xml
+/atom
+    /categories
+        /{slug}
+        /{slug}.xml
+/search
+/{halo.admin-path:admin}
+/version
+/install
+/avatar
+/logo
+/favicon.ico
+/${server.error.path:${error.path:/error}}
+/404
+/500
+/archives/{slug:.*}/password
+/rss
+/rss.xml
+/sitemap
+/sitemap.xml
+/sitemap.html
+/robots.txt
+/{prefix}
+    /page
+        /{page:\\d+}
+    /{slug}
+        /page
+            /{page:\\d+}
+/{year:\\d+}
+    /{month:\\d+}
+        /{slug}
+        /{day:\\d+}
+            /{slug}
+
+/api/admin
+    /is_installed
+    /login/precheck
+    /login
+    /logout
+    /password/code
+    /password/reset
+    /refresh/{refreshToken}
+    /counts
+    /environments
+    /halo-admin
+    /halo/logfile
+    /attachements
+        /{id:\\d}
+        /{attachementId:\\d}
+    /backups
+    /categories
+    /installations
+    /journals
+        /comments
+    /links
+    /logs
+    /mains
+    /menus
+    /migrations
+    /options
+    /photos
+    /posts
+    /sheets
+    /statics
+    /statistics
+    /tags
+    /themes
+    /users
+
+/api/content
+    /archives
+    /categories
+    /journals
+    /links
+    /menus
+    /options
+    /photos
+    /posts
+    /sheets
+    /statistics
+    /tags
+    /themes
+    /users
+```
+
